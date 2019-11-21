@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intent HandlerUI Hoster View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="IntentHandlerUIHosterViewController" customModule="IntentsHandlerUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="270"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="167"/>
+        </scene>
+        <!--Navigation Map Box View Controller-->
+        <scene sceneID="SLP-hy-MrU">
+            <objects>
+                <viewController storyboardIdentifier="NavigationMapBoxViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GuM-RJ-fWh" customClass="NavigationMapBoxViewController" customModule="IntentsSiriKit" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aC5-VF-OYU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="izb-qk-Wgh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gm4-1T-RC6">
+                                <rect key="frame" x="20" y="229.5" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="izb-qk-Wgh" firstAttribute="top" secondItem="aC5-VF-OYU" secondAttribute="top" id="0zh-Id-ldb"/>
+                            <constraint firstItem="gm4-1T-RC6" firstAttribute="leading" secondItem="WGU-xs-Hqt" secondAttribute="leading" constant="20" id="86Q-oZ-tKC"/>
+                            <constraint firstItem="WGU-xs-Hqt" firstAttribute="bottom" secondItem="gm4-1T-RC6" secondAttribute="bottom" constant="20" id="9NY-wC-Jul"/>
+                            <constraint firstItem="WGU-xs-Hqt" firstAttribute="bottom" secondItem="izb-qk-Wgh" secondAttribute="bottom" id="DM4-5S-WAw"/>
+                            <constraint firstItem="izb-qk-Wgh" firstAttribute="leading" secondItem="WGU-xs-Hqt" secondAttribute="leading" id="QPv-Hg-S9g"/>
+                            <constraint firstItem="WGU-xs-Hqt" firstAttribute="trailing" secondItem="gm4-1T-RC6" secondAttribute="trailing" constant="20" id="dG1-gK-hxl"/>
+                            <constraint firstItem="WGU-xs-Hqt" firstAttribute="trailing" secondItem="izb-qk-Wgh" secondAttribute="trailing" id="kwQ-r9-VDU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WGU-xs-Hqt"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="270"/>
+                    <connections>
+                        <outlet property="currentLocationLabel" destination="gm4-1T-RC6" id="AUw-ji-qlJ"/>
+                        <outlet property="mapView" destination="izb-qk-Wgh" id="geR-V3-MLO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21l-Fb-2DP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="167"/>
+        </scene>
+    </scenes>
+</document>

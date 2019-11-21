@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dBo-dw-Ew7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Coyote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconSiri" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-vq-r2H">
+                                <rect key="frame" x="20" y="108" width="374" height="195"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-3a-k8m">
+                                <rect key="frame" x="20" y="388" width="374" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fA6-er-PvH" customClass="CoyoteButton" customModule="Coyote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Shorcut">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Blm-GA-Qus" kind="show" identifier="segueSelectionHomeActivityViewController" id="5uD-S4-59e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEz-2A-KWa" customClass="CoyoteButton" customModule="Coyote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Shorcut + Siri">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="QeY-mp-sfD" kind="show" id="NL7-hk-jfA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="aEf-Cc-dYI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LDk-3a-k8m" firstAttribute="top" secondItem="XDM-vq-r2H" secondAttribute="bottom" constant="85" id="BUa-PH-pRA"/>
+                            <constraint firstItem="LDk-3a-k8m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ChK-hJ-zhs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LDk-3a-k8m" secondAttribute="trailing" constant="20" id="M8N-6Y-6IG"/>
+                            <constraint firstItem="XDM-vq-r2H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="OvY-Oa-DpH"/>
+                            <constraint firstItem="LDk-3a-k8m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qfm-6F-0q2"/>
+                            <constraint firstItem="XDM-vq-r2H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ToP-Wn-VhL"/>
+                            <constraint firstItem="LDk-3a-k8m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="foP-5x-65J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XDM-vq-r2H" secondAttribute="trailing" constant="20" id="irj-x9-a0Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dup-H0-fnU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258" y="70"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UgG-EB-kv4">
+            <objects>
+                <navigationController id="dBo-dw-Ew7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c0q-QY-UgO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8r4-VZ-cAR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDf-zL-TxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1174" y="70"/>
+        </scene>
+        <!--Activity View Controller-->
+        <scene sceneID="xW7-hF-W7O">
+            <objects>
+                <viewController storyboardIdentifier="ActivityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zz6-ye-cfS" customClass="ActivityViewController" customModule="Coyote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RkF-W1-Jpe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="amZ-QZ-3G4">
+                                <rect key="frame" x="20" y="64" width="374" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ville d'aller" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JK-G6-DEq">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oSl-T0-ys6">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter un retour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3S-k3-gbO">
+                                                <rect key="frame" x="0.0" y="15" width="129.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JQC-YP-eze">
+                                                <rect key="frame" x="325" y="9.5" width="51" height="31"/>
+                                                <color key="onTintColor" red="1" green="0.18142545090000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="actionDidSwitch:" destination="zz6-ye-cfS" eventType="valueChanged" id="8BQ-cp-2rp"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ville d'aller" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OUJ-qg-IaT">
+                                        <rect key="frame" x="0.0" y="100" width="374" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="rJz-5a-G98"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="amZ-QZ-3G4" firstAttribute="leading" secondItem="3kN-d3-9tV" secondAttribute="leading" constant="20" id="3Xb-k5-iPw"/>
+                            <constraint firstItem="3kN-d3-9tV" firstAttribute="trailing" secondItem="amZ-QZ-3G4" secondAttribute="trailing" constant="20" id="ezq-xq-ilN"/>
+                            <constraint firstItem="amZ-QZ-3G4" firstAttribute="top" secondItem="3kN-d3-9tV" secondAttribute="top" constant="20" id="lyr-RJ-aSW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3kN-d3-9tV"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityEndTextField" destination="OUJ-qg-IaT" id="Kf7-JS-9UE"/>
+                        <outlet property="cityStartTextField" destination="7JK-G6-DEq" id="F2s-vU-P7u"/>
+                        <outlet property="citySwitch" destination="JQC-YP-eze" id="ESZ-d8-bI5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CoD-2w-iJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3064" y="493"/>
+        </scene>
+        <!--Navigation Map Box View Controller-->
+        <scene sceneID="Ate-gh-diw">
+            <objects>
+                <viewController storyboardIdentifier="NavigationMapBoxViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wRn-CQ-U7c" customClass="NavigationMapBoxViewController" customModule="IntentsSiriKit" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AA4-5T-RUz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e0d-8V-lBH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCf-ku-6v7">
+                                <rect key="frame" x="29" y="772.5" width="365" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e0d-8V-lBH" firstAttribute="leading" secondItem="On2-63-jx1" secondAttribute="leading" id="Ydt-xw-Y9U"/>
+                            <constraint firstItem="e0d-8V-lBH" firstAttribute="top" secondItem="On2-63-jx1" secondAttribute="top" id="if9-tv-AYg"/>
+                            <constraint firstItem="On2-63-jx1" firstAttribute="trailing" secondItem="e0d-8V-lBH" secondAttribute="trailing" id="ooN-99-8N0"/>
+                            <constraint firstItem="sCf-ku-6v7" firstAttribute="leading" secondItem="On2-63-jx1" secondAttribute="leading" constant="29" id="paz-T8-jaW"/>
+                            <constraint firstItem="On2-63-jx1" firstAttribute="bottom" secondItem="sCf-ku-6v7" secondAttribute="bottom" constant="20" id="tKh-tD-oJc"/>
+                            <constraint firstItem="On2-63-jx1" firstAttribute="bottom" secondItem="e0d-8V-lBH" secondAttribute="bottom" id="ucA-db-2bm"/>
+                            <constraint firstItem="On2-63-jx1" firstAttribute="trailing" secondItem="sCf-ku-6v7" secondAttribute="trailing" constant="20" id="ydt-YP-1CO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="On2-63-jx1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NUP-Uz-huF"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="currentLocationLabel" destination="sCf-ku-6v7" id="YkY-RT-Re9"/>
+                        <outlet property="mapView" destination="e0d-8V-lBH" id="6Wv-SN-UJu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BsX-V0-wJj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="200"/>
+        </scene>
+        <!--Selection Home Activity View Controller-->
+        <scene sceneID="AOT-bu-ZXh">
+            <objects>
+                <viewController id="Blm-GA-Qus" customClass="SelectionHomeActivityViewController" customModule="Coyote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GsZ-dT-gZl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jEd-BS-AJM">
+                                <rect key="frame" x="20" y="298" width="374" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aucune adresse n'est enregistrée" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbA-br-L6X">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HZ-Y6-cqK" customClass="CoyoteButton" customModule="Coyote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="374" height="60"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Recherche de l'adresse de la maison">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionTapNavigateToGMSAutocomplete:" destination="Blm-GA-Qus" eventType="touchUpInside" id="7Tv-bT-0GF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfx-SE-tjA" customClass="CoyoteButton" customModule="Coyote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="160" width="374" height="60"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Lancer la carte, direction vers la maison">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="wRn-CQ-U7c" kind="show" identifier="segueNavigationMapBoxViewController" id="Nmz-TY-P3j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Bu-11F" customClass="CoyoteButton" customModule="Coyote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="240" width="374" height="60"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Supprimer le raccourci">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionTapCleanBackup:" destination="Blm-GA-Qus" eventType="touchUpInside" id="KPG-Wf-9dv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="daz-Ca-xrG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jEd-BS-AJM" firstAttribute="centerX" secondItem="GsZ-dT-gZl" secondAttribute="centerX" id="Iu1-Ob-VId"/>
+                            <constraint firstItem="gEe-NR-Glb" firstAttribute="trailing" secondItem="jEd-BS-AJM" secondAttribute="trailing" constant="20" id="NBz-er-jA4"/>
+                            <constraint firstItem="jEd-BS-AJM" firstAttribute="centerY" secondItem="GsZ-dT-gZl" secondAttribute="centerY" id="TJm-qg-Jyx"/>
+                            <constraint firstItem="jEd-BS-AJM" firstAttribute="leading" secondItem="gEe-NR-Glb" secondAttribute="leading" constant="20" id="fWl-qa-TBc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gEe-NR-Glb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jvB-Xo-8kI"/>
+                    <connections>
+                        <outlet property="adressHomeLabel" destination="PbA-br-L6X" id="qzy-NR-gFI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7y-HV-IPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="-211"/>
+        </scene>
+        <!--Siri View Controller-->
+        <scene sceneID="a0p-wf-G44">
+            <objects>
+                <viewController id="QeY-mp-sfD" customClass="SiriViewController" customModule="Coyote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lfr-5q-x61">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SGg-C6-T1r">
+                                <rect key="frame" x="20" y="223" width="374" height="450"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0qB-Mh-AqL" customClass="CoyoteButton" customModule="Coyote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="136.5"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Déclare une alerte accident dans mon sens">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionTapDonatingIntents:" destination="QeY-mp-sfD" eventType="touchUpInside" id="psk-we-Mge"/>
+                                            <action selector="actionTapNavigateToGMSAutocomplete:" destination="Blm-GA-Qus" eventType="touchUpInside" id="k7j-86-s5d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GfX-N6-eOX" customClass="CoyoteButton" customModule="Coyote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="156.5" width="374" height="137"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Direction vers la maison si je me trouve au travail">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionTapDonatingIntentsRelevantGoToHomeAtWork:" destination="QeY-mp-sfD" eventType="touchUpInside" id="3CJ-sb-o1v"/>
+                                            <action selector="actionTapNavigateToGMSAutocomplete:" destination="Blm-GA-Qus" eventType="touchUpInside" id="Pcx-12-zOx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="e7p-IT-sRn" customClass="CoyoteButton" customModule="Coyote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="313.5" width="374" height="136.5"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Direction vers le travail si c'est le matin">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionTapDonatingIntentsRelevantGoToWorkAtMorning:" destination="QeY-mp-sfD" eventType="touchUpInside" id="enm-Ca-OKm"/>
+                                            <action selector="actionTapNavigateToGMSAutocomplete:" destination="Blm-GA-Qus" eventType="touchUpInside" id="CAY-Bf-Y1o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="vNU-Kg-kp0"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don d'intentions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xw-nt-M4Y">
+                                <rect key="frame" x="20" y="108" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fmb-9G-dFK" firstAttribute="trailing" secondItem="SGg-C6-T1r" secondAttribute="trailing" constant="20" id="IF0-D1-MIC"/>
+                            <constraint firstItem="9xw-nt-M4Y" firstAttribute="leading" secondItem="fmb-9G-dFK" secondAttribute="leading" constant="20" id="ITE-ye-F1k"/>
+                            <constraint firstItem="SGg-C6-T1r" firstAttribute="centerX" secondItem="lfr-5q-x61" secondAttribute="centerX" id="SQ2-SG-t6U"/>
+                            <constraint firstItem="fmb-9G-dFK" firstAttribute="trailing" secondItem="9xw-nt-M4Y" secondAttribute="trailing" constant="20" id="YcD-sY-VTN"/>
+                            <constraint firstItem="SGg-C6-T1r" firstAttribute="centerY" secondItem="lfr-5q-x61" secondAttribute="centerY" id="uZb-Hw-vAX"/>
+                            <constraint firstItem="SGg-C6-T1r" firstAttribute="leading" secondItem="fmb-9G-dFK" secondAttribute="leading" constant="20" id="wU9-Rr-LZx"/>
+                            <constraint firstItem="9xw-nt-M4Y" firstAttribute="top" secondItem="fmb-9G-dFK" secondAttribute="top" constant="20" id="wc9-gv-SQb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fmb-9G-dFK"/>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="SGg-C6-T1r" id="pNT-Zk-kf3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGy-hf-g7m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632" y="475"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconSiri" width="894" height="894"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
